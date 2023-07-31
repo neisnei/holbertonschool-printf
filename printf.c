@@ -2,8 +2,8 @@
 
 /**
  * _printf - function that produces output
- *@const: char
  *@format: string
+ *Return: count
  */
 int _printf(const char *format, ...)
 {
@@ -22,15 +22,13 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
-			count++;
+			count += _putchar(format[i]);
 		}
 		else
 		{
 			if (format[i + 1] == '%')
 			{
-				_putchar('%');
-				count++;
+				count += _putchar('%');
 			}
 			else
 			{

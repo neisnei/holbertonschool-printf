@@ -2,8 +2,9 @@
 #include <stdarg.h>
 
 /**
- * functions - functions
- return: always 0
+ * _printchar - functions
+ * @values: ...
+ * Return: always 0
  */
 int _printchar(va_list values)
 {
@@ -12,6 +13,11 @@ int _printchar(va_list values)
 	return (write(1, &c, 1));
 }
 
+/**
+ * _printString - print string
+ * @values: ...
+ * Return:always
+ */
 int _printString(va_list values)
 {
 	int count = 0;
@@ -25,18 +31,34 @@ int _printString(va_list values)
 	return (count);
 }
 
+/**
+ * _printdec - print dec
+ * @values: ...
+ * Return: always 0
+ *
+ */
 int _printdec(va_list values)
 {
 	(void) values;
 	return (0);
 }
 
-int _printint(va_list ar_numlist)
+/**
+ * _printint - print int
+ * @values: ...
+ * Return: 0
+ */
+int _printint(va_list values)
 {
-	(void) ar_numlist;
+	(void) values;
 	return (0);
 }
 
+/**
+ *_putchar - ...
+ *@c: ...
+ *Return: ...
+ */
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
