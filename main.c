@@ -11,30 +11,30 @@ int main (void)
 
 int _printint
 {
-	printf("%i", 'i');
+	_printf("%i", 'i');
 	return (0);
 }
 
 int _printdec
 {
-	printf("%d", 'd');
+	_printf("%d", 'd');
 	return (0);
 }
 
 int _printString
 {
-	printf("%s", 's');
+	_printf("%s", 's');
 	return (0);
 }
 
 int _printchar
 {
-	printf("%c", 'c');
+	_printf("%c", 'c');
 	return (0);
 }
 
 int _printf
 {
-	printf("%%", '%');
+	_printf("%%", '%');
 	return (0);
 }
