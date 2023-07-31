@@ -1,0 +1,49 @@
+.TH _printf 3 "July 27 2023" "_printf Function"
+.SH NAME
+_printf \- custom implementation of printf-like function
+.SH SYNOPSIS
+.B #include <stdio.h>
+.B #include "main.h"
+
+.I int _printf(const char *format, ...);
+.SH DESCRIPTION
+The \fB_printf\fR function is a custom implementation of the printf-like function in C that allows you to print formatted output to the standard output.
+
+.SH RETURN VALUE
+The \fB_printf\fR function returns the number of characters printed (excluding the null byte used to end output to strings). If an error occurs, it returns -1.
+
+.SH FORMAT SPECIFIERS
+The following format specifiers are supported:
+.IP \fB%c\fR
+Print a single character. The argument should be of type \fBint\fR (a character, which is promoted to int when passed through "...").
+.IP \fB%s\fR
+Print a null-terminated string. The argument should be of type \fBconst char *\fR (a pointer to the start of the string).
+.IP \fB%%\fR
+Print a literal percent sign.
+
+.SH USAGE
+.B #include <stdio.h>
+.B #include "main.h"
+
+.I int main(void) {
+..B char chr = 'H';
+..B _printf("Character: [%c]\n", chr);
+..B return 0;
+.B }
+
+.SH COMPILATION
+The \fBholberton.h\fR header file must be included in the source file that calls the \fB_printf\fR function. To compile, you may use the following command:
+
+.B gcc -o printf0.c 
+
+.SH LIMITATIONS
+The \fB_printf\fR function is a simplified implementation and currently lacks support for many features found in the standard library \fBprintf\fR function, such as width, precision, and most format specifiers. The handling of integer conversion specifiers (\fB'd'\fR and \fB'i'\fR) is not implemented.
+
+.SH AUTHOR
+The \fB_printf\fR function was implemented by Omar Velez as part of a programming exercise.
+
+.SH SEE ALSO
+printf(3), stdio(3)
+
+.SH BUGS
+Report any bugs to neisnei@github.com
