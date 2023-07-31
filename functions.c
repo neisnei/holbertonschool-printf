@@ -13,8 +13,15 @@ int _printchar(va_list values)
 
 int _printString(va_list values)
 {
-	(void) values;
-	return (0);
+	char *str = va_arg(values, char *);
+	int count = 0;
+
+	if (str == NULL)
+		str = "(null)";
+
+	count += _write_str(str);
+
+	return count;
 }
 
 int _printdec(va_list values)
