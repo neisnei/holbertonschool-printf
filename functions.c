@@ -13,7 +13,7 @@ int _printchar(va_list values)
 
 int _printString(va_list values)
 {
-	string s = va_arg(values, int);
+	char s = va_arg(values, int);
 
 	return (write(1, &s, 1));
 }
