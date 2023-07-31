@@ -30,6 +30,8 @@ int _printdec(va_list values)
 
 int _printint(va_list ar_numlist)
 {
-	(void) ar_numlist;
-	return (0);
+    int num = va_arg(ar_numlist, int);
+    int count = putchar(num);
+
+    return count;
 }
