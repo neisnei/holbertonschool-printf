@@ -28,9 +28,3 @@ int _printint(va_list ar_numlist)
 	(void) ar_numlist;
 	return (0);
 }
-
-int _putchar(char c)
-{
-	(void) c;
-	return (0);
-}
