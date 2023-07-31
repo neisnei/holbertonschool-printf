@@ -14,8 +14,15 @@ int _printchar(va_list values)
 
 int _printString(va_list values)
 {
-	(void) values;
-	return (0);
+	int count = 0;
+	char *s = va_arg(values, char *);
+
+	while (*s != '\0')
+	{
+		count += _putchar(*s);
+		s++;
+	}
+	return (count);
 }
 
 int _printdec(va_list values)
@@ -28,4 +35,9 @@ int _printint(va_list ar_numlist)
 {
 	(void) ar_numlist;
 	return (0);
+}
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }

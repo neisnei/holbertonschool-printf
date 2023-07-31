@@ -26,6 +26,6 @@ int _printf(const char *format, ...);
 int _printchar(va_list values);
 int _printString(va_list values);
 int _printdec(va_list values);
-int _printint(va_list ar_numlist);
-int (*get_func(char s))(va_list values);
+int _printint(va_list values);
+int _putchar(char c);
 #endif

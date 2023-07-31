@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 		{"s", _printString},
 		{"d", _printdec},
 		{"i", _printint},
-		{"%", _printchar},
 		{NULL, NULL}
 	};
 	va_list values;
@@ -23,17 +22,28 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			count++;
 		}
 		else
 		{
-			for (j = 0; j < 5; j++)
-			if (*specifiers[j].t == format[i + 1])
+			if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				count++;
+			}
+			else
+			{
+				for (j = 0; j < 4; j++)
 				{
-					count += specifiers[j].f(values);
-					break;
+					if (*specifiers[j].t == format[i + 1])
+					{
+						format++;
+						count += specifiers[j].f(values);
+						break;
+					}
 				}
+			}
 		}
 	}
 	va_end(values);
