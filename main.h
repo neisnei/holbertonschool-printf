@@ -23,7 +23,6 @@ int (*f)(va_list);
 func_t;
 
 int _printf(const char *format, ...);
-int _putchar(char c);
 int _printchar(va_list values);
 int _printString(va_list values);
 int _printdec(va_list values);
