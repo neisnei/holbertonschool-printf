@@ -23,7 +23,7 @@
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
+			putchar(format[i]);
 			count++;
 		}
 		else
