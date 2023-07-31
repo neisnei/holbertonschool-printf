@@ -13,8 +13,9 @@ int _printchar(va_list values)
 
 int _printString(va_list values)
 {
-	(void) values;
-	return (0);
+	string s = va_arg(values, int);
+
+	return (write(1, &s, 1));
 }
 
 int _printdec(va_list values)
