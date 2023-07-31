@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- *
+ * functions - functions
+ return: always 0
  */
 int _printchar(va_list values)
 {
