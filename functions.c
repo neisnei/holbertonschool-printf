@@ -23,7 +23,7 @@ int _printdec(va_list values)
 	int num = va_arg(values, int);
 	int count = 0;
 
-	count += _write_dec(num);
+	count += putchar(num);
 
 	return count;
 }
