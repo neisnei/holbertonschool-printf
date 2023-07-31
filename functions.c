@@ -22,7 +22,7 @@ int _printString(va_list values)
 
 	while (*str)
 	{
-		count += _putchar_c(*str);
+		count += _printString(*str);
 		str++;
 	}
 
