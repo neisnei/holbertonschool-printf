@@ -13,9 +13,21 @@ int _printchar(va_list values)
 
 int _printString(va_list values)
 {
-	char s = va_arg(values, int);
+	{
+	char *str = va_arg(values, char *);
+	int count = 0;
 
-	return (write(1, &s, 1));
+	if (str == NULL)
+		str = "(null)";
+
+	while (*str)
+	{
+		count += _putchar_c(*str);
+		str++;
+	}
+
+	return count;
+}
 }
 
 int _printdec(va_list values)
