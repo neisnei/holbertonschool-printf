@@ -27,4 +27,5 @@ int _printchar(va_list values);
 int _printString(va_list values);
 int _printint(va_list values);
 int _putchar(char c);
+int _printPercent(va_list values);
 #endif

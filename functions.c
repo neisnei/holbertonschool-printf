@@ -23,6 +23,8 @@ int _printString(va_list values)
 	int count = 0;
 	char *s = va_arg(values, char *);
 
+	if (s == NULL)
+		s = "(null)";
 	while (*s != '\0')
 	{
 		count += _putchar(*s);
@@ -55,4 +57,17 @@ int _printint(va_list values)
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+
+/**
+ * _printPercent - ...
+ * @values: ...
+ * Return: ...
+ */
+int _printPercent(va_list values)
+{
+	char p = '%';
+
+	(void) values;
+	return (write(1, &p, 1));
 }
