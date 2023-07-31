@@ -3,7 +3,7 @@
  * main c - printf
  * return: always 0
  */
-int main (void)
+int main(void)
 {
 	_printf("%c", 'N');
 	return (0);
@@ -30,11 +30,5 @@ int _printString
 int _printchar
 {
 	_printf("%c", 'c');
-	return (0);
-}
-
-int _printf
-{
-	_printf("%%", '%');
 	return (0);
 }
