@@ -32,26 +32,19 @@ int _printString(va_list values)
 }
 
 /**
- * _printdec - print dec
- * @values: ...
- * Return: always 0
- *
- */
-int _printdec(va_list values)
-{
-	(void) values;
-	return (0);
-}
-
-/**
  * _printint - print int
  * @values: ...
  * Return: 0
  */
 int _printint(va_list values)
 {
-	(void) values;
-	return (0);
+	int num = va_arg(values, int);
+	int count = 0;
+	char buffer[20];
+
+	count += sprintf(buffer, "%d", num);
+	write(1, buffer, count);
+	return (count);
 }
 
 /**

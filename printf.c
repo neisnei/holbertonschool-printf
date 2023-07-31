@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	func_t specifiers[] = {
 		{"c", _printchar},
 		{"s", _printString},
-		{"d", _printdec},
+		{"d", _printint},
 		{"i", _printint},
 		{NULL, NULL}
 	};
@@ -21,26 +21,27 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-		{
 			count += _putchar(format[i]);
-		}
 		else
 		{
-			if (format[i + 1] == '%')
+			for (j = 0; j < 4; j++)
 			{
-				count += _putchar('%');
-			}
-			else
-			{
-				for (j = 0; j < 4; j++)
+				if (*specifiers[j].t == format[i + 1])
 				{
-					if (*specifiers[j].t == format[i + 1])
-					{
-						format++;
-						count += specifiers[j].f(values);
-						break;
-					}
+					format++;
+					count += specifiers[j].f(values);
+					break;
 				}
+			}
+			if (j == 4)
+			{
+				if (format[i + 1] == '%')
+				{
+					count += _putchar('%');
+					format++;
+				}
+				else
+					count += _putchar(format[i]);
 			}
 		}
 	}
