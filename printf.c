@@ -5,9 +5,9 @@
  *@const: char
  *@format: string
  */
- int _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
-	func_t specifiers [] = {
+	func_t specifiers[] = {
 		{"c", _printchar},
 		{"s", _printString},
 		{"d", _printdec},
@@ -29,7 +29,7 @@
 		else
 		{
 			for (j = 0; j < 5; j++)
-				if(*specifiers[j].t == format[i + 1])
+			if (*specifiers[j].t == format[i + 1])
 				{
 					count += specifiers[j].f(values);
 					break;
