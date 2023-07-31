@@ -6,7 +6,7 @@
 int *ptr = NULL
 {
 	_printf("%c", 'N');
-	return (0);
+	return (NULL);
 }
 
 int _printint
