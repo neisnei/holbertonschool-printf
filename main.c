@@ -11,24 +11,24 @@ int *ptr = NULL
 
 int _printint
 {
-	_printf("%i", 'i');
+	_printf("%i", 'I');
 	return (0);
 }
 
 int _printdec
 {
-	_printf("%d", 'd');
+	_printf("%d", 'D');
 	return (0);
 }
 
 int _printString
 {
-	_printf("%s", 's');
+	_printf("%s", 'S');
 	return (0);
 }
 
 int _printchar
 {
-	_printf("%c", 'c');
+	_printf("%c", 'C');
 	return (0);
 }
