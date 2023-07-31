@@ -34,4 +34,5 @@ To use the _printf function in your C program, follow these steps:
 
 Author
 Neischaly Ruidiaz
-Natzu 
+
+Omar Velez
