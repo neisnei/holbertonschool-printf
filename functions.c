@@ -20,8 +20,12 @@ int _printString(va_list values)
 
 int _printdec(va_list values)
 {
-	(void) values;
-	return (0);
+	int num = va_arg(values, int);
+	int count = 0;
+
+	count += _write_dec(num);
+
+	return count;
 }
 
 int _printint(va_list ar_numlist)
